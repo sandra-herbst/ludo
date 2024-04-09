@@ -1,0 +1,428 @@
+{
+    light-text-primary-color:   #EEEEEF;
+    dark-third-color:           #202225;
+    dark-secondary-color:       #36393F;
+    yellow-color:               #FFEE31;
+    red-color:                  #F44152;
+    green-color:                #0BD674;
+    blue-color:                 #28A7E8;
+
+}
+
+
+/* Dot Background in the Start Game & Rules Stage */
+.root {
+    -fx-background-color: white;
+    -fx-background-image: url("../images/lightmode/Dot_BG.png");
+}
+
+/* Background of the Main Stage */
+#bg{
+    -fx-background-image: url("../images/lightmode/BG.png");
+}
+
+/* Shine in the Main Stage, animated in MainController*/
+#shineImage{
+    -fx-image: url("../images/lightmode/shine.png");
+}
+
+/* Background for the Settings Stage */
+#settingsbg{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../images/settingsBG.png");
+}
+
+/* Background for the Confirm Stage */
+#confirmbg {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../images/ConfirmBG.png");
+}
+
+/* Logo */
+#iconImage{
+    -fx-image: url("../images/lightmode/Icon.png");
+}
+
+/* Background for the Game Stage */
+#gamebg{
+    -fx-background-image: none;
+    -fx-background-color: white;
+}
+
+/* Graphic for the Game Board Gridpane */
+#gameBoard{
+    -fx-background-image: url("../images/game/Brettspiel.png");
+}
+
+/* Graphic for the winner Pop Up */
+#winnerbg{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../images/game/winnerBG.png");
+}
+
+/* Username Area accent in Start Game Stage */
+.area{
+    -fx-background-image: url("../images/lightmode/Options.png");
+}
+
+/* Username Textfield */
+.text-field:focused {
+    -fx-background-color: transparent;
+    -fx-prompt-text-fill: linear-gradient(#e07a21, #ad5202);
+    -fx-font-style: italic;
+}
+
+.text-field {
+    -fx-min-width: 230px;
+    -fx-max-width: 230px;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: linear-gradient(#e07a21, #ad5202);
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-color: transparent;
+    -fx-text-fill: linear-gradient(#e07a21, #ad5202);
+    -fx-font-size: 15pt;
+    -fx-background-radius: 0px;
+}
+
+/* Text in any Stage */
+.label{
+    -fx-font-size: 25px;
+    -fx-font-family: 'Gilroy-Bold';
+    -fx-text-fill: linear-gradient(#e07a21, #ad5202);
+}
+
+.infoText{
+    -fx-font-size: 15px;
+    -fx-font-family: 'Gilroy-Regular';
+}
+
+/* Header Labels */
+.title-label{
+    -fx-text-fill: linear-gradient(#e07a21, #ad5202);
+    -fx-font-family: 'Gilroy-ExtraBold';
+    -fx-font-size: 60px;
+    -fx-effect: innershadow( gaussian , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+/* All Buttons (Such as Back, Play, Confirm...) */
+.button {
+    -fx-background-radius: 35px;
+    -fx-background-color: transparent;
+    -fx-font-size: 23pt;
+    -fx-font-family: 'Gilroy-ExtraBold';
+    -fx-max-width: 310px;
+    -fx-max-height: 10px;
+    -fx-border-width: 5px;
+    -fx-border-radius: 35px;
+}
+
+/* RadioButton of the Settings Stage (DarkTheme) */
+.radio-button {
+    -fx-font-size: 25px;
+    -fx-text-fill: linear-gradient(#e07a21, #ad5202);
+    -fx-font-family: 'Gilroy-Bold';
+
+}
+
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #000;
+    -fx-background-color: white;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+    -fx-padding: 4px;
+}
+.radio-button .radio:selected {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:armed {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:determinate {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:indeterminate {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button .dot {
+    -fx-background-radius: 15px;
+    -fx-padding: 8px;
+}
+
+/* Styling of the Buttons (Back, Play, Confirm ...) */
+.red-button{
+    -fx-text-fill: linear-gradient(#c7483a, #4d1410);
+    -fx-border-color: linear-gradient(#ffc4b5 25%, #4d1410);
+    -fx-background-color: linear-gradient(#ffc4b5, #cf3325);
+}
+
+.green-button{
+    -fx-text-fill: linear-gradient(#4d7a26, #243d0d);
+    -fx-border-color: linear-gradient(#d2ff52 25%, #243d0d);
+    -fx-background-color: linear-gradient(#d2ff52, #61b017);
+}
+
+.blue-button{
+    -fx-text-fill: linear-gradient(#1f74b5, #07487a);
+    -fx-border-color: linear-gradient(#b7deed 25%, #07487a);
+    -fx-background-color: linear-gradient(#b7deed, #21b4e2);
+}
+
+.yellow-button{
+    -fx-text-fill: linear-gradient(#e07a21, #ad5202);
+    -fx-border-color: linear-gradient(#ffd65b 25%, #ad5202);
+    -fx-background-color: linear-gradient(#ffd65b, #e68400);
+}
+
+
+
+.red-button:hover{
+    -fx-text-fill: linear-gradient(#ffc4b5, #cf3325);
+    -fx-border-color: linear-gradient(#4d1410, #cf3325);
+    -fx-background-color: linear-gradient(#c7483a, #8f2f28);
+}
+
+.green-button:hover{
+    -fx-text-fill: linear-gradient(#d2ff52, #61b017);
+    -fx-border-color: linear-gradient(#243d0d, #61b017);
+    -fx-background-color: linear-gradient(#4d7a26, #466e21);
+}
+
+.blue-button:hover{
+    -fx-text-fill: linear-gradient(#b7deed, #21b4e2);
+    -fx-border-color: linear-gradient(#07487a, #1f74b5);
+    -fx-background-color: linear-gradient(#1f74b5, #1169ac);
+}
+
+.yellow-button:hover{
+    -fx-text-fill: linear-gradient(#ffd65b, #e68400);
+    -fx-border-color: linear-gradient(#ad5202, #e07a21);
+    -fx-background-color: linear-gradient(#e07a21, #ad5202);
+}
+
+/* Graphics of the buttons (Back, Play, Confirm ...)*/
+.start{
+    -fx-graphic: url("../images/icons/play.png");
+    -fx-graphic-text-gap: 30px;
+}
+
+.rules{
+    -fx-graphic: url("../images/icons/rules.png");
+    -fx-graphic-text-gap: 30px;
+}
+
+.settings{
+    -fx-graphic: url("../images/icons/settings.png");
+    -fx-graphic-text-gap: 30px;
+}
+
+.exit{
+    -fx-graphic: url("../images/icons/close.png");
+    -fx-graphic-text-gap: 30px;
+}
+
+.confirm{
+    -fx-graphic: url("../images/icons/check.png");
+    -fx-graphic-text-gap: 30px;
+}
+
+.back{
+    -fx-graphic: url("../images/icons/back.png");
+    -fx-graphic-text-gap: 30px;
+}
+
+#deutsch{
+    -fx-graphic: url("../images/Deutsch.png");
+    -fx-background-color: transparent;
+}
+
+#english{
+    -fx-graphic: url("../images/US-English.png");
+    -fx-background-color: transparent;
+}
+
+#info{
+    -fx-font-size: 15px;
+}
+
+.language:hover{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.7, 0.0, 0.0);
+}
+
+.language:selected{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.7, 0.0, 0.0);
+}
+
+/* Toggle Buttons of the Start Game Stage */
+.toggle-button {
+    -fx-background-color: white;
+    -fx-border-radius: 95px;
+    -fx-border-width: 5px;
+    -fx-background-radius: 95px;
+}
+
+/* Graphics of the Figure Color Buttons */
+#blueToggle {
+    -fx-border-color: linear-gradient(#07487a, #1f74b5);
+    -fx-graphic: url("../images/Figure_blue.png");
+}
+
+#yellowToggle {
+    -fx-border-color: linear-gradient(#ad5202, #e07a21);
+    -fx-graphic: url("../images/Figure_yellow.png");
+}
+
+#redToggle {
+    -fx-graphic: url("../images/Figure_red.png");
+    -fx-border-color: linear-gradient(#4d1410, #cf3325);
+}
+
+#greenToggle {
+    -fx-graphic: url("../images/Figure_green.png");
+    -fx-border-color: linear-gradient(#243d0d, #61b017);
+}
+
+
+
+#blueToggle:hover {
+    -fx-background-color: linear-gradient(#b7deed, #21b4e2);
+}
+
+#yellowToggle:hover {
+    -fx-background-color: linear-gradient(#ffd65b, #e68400);
+}
+
+#redToggle:hover {
+    -fx-background-color: linear-gradient(#ffc4b5, #cf3325);
+}
+
+#greenToggle:hover {
+    -fx-background-color: linear-gradient(#d2ff52, #61b017);
+}
+
+
+
+
+#blueToggle:selected {
+    -fx-background-color: linear-gradient(#b7deed, #21b4e2);
+}
+
+#yellowToggle:selected {
+    -fx-background-color: linear-gradient(#ffd65b, #e68400);
+}
+
+#redToggle:selected {
+    -fx-background-color: linear-gradient(#ffc4b5, #cf3325);
+}
+
+#greenToggle:selected {
+    -fx-background-color: linear-gradient(#d2ff52, #61b017);
+}
+
+.comPlayerToggle{
+    -fx-font-family: 'Gilroy-ExtraBold';
+    -fx-font-size: 30px;
+    -fx-border-radius: 65px;
+    -fx-border-width: 5px;
+    -fx-border-color: linear-gradient( light-text-primary-color, dark-secondary-color);
+    -fx-background-radius: 75px;
+    -fx-background-color: white;
+}
+
+.comPlayerToggle:hover{
+    -fx-background-color: linear-gradient(dark-secondary-color,light-text-primary-color);
+}
+
+.comPlayerToggle:selected{
+    -fx-background-color: linear-gradient(dark-secondary-color,light-text-primary-color);
+}
+
+/* Graphics of the ComPlayer Amount Buttons */
+#comP1{
+    -fx-graphic: url("../images/ComP1.png");
+}
+#comP2{
+    -fx-graphic: url("../images/ComP2.png");
+}
+#comP3{
+    -fx-graphic: url("../images/ComP3.png");
+}
+
+/* Figures on the Game */
+.figure{
+    -fx-background-color: transparent;
+}
+
+.figure:hover{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
+}
+
+/* Figure Graphics on the Game */
+.redFigure{
+    -fx-graphic: url("../images/game/piecesRed.png");
+}
+
+.blueFigure{
+    -fx-graphic: url("../images/game/piecesBlue.png");
+}
+
+.yellowFigure{
+    -fx-graphic: url("../images/game/piecesYellow.png");
+}
+
+.greenFigure{
+    -fx-graphic: url("../images/game/piecesGreen.png");
+}
+
+/* Username Labels in the Game */
+#redName{
+    -fx-font-size: 40px;
+    -fx-text-fill: linear-gradient(#ffc4b5, #cf3325);
+}
+#blueName{
+    -fx-font-size: 40px;
+    -fx-text-fill: linear-gradient(#b7deed, #21b4e2);
+}
+#greenName{
+    -fx-font-size: 40px;
+    -fx-text-fill: linear-gradient(#d2ff52, #61b017);
+}
+#yellowName{
+    -fx-font-size: 40px;
+    -fx-text-fill: linear-gradient(#ffd65b, #e68400);
+}
+
+/* Settings Buttons in the Game */
+#settingsButton {
+    -fx-background-color: transparent;
+    -fx-graphic: url("../images/icons/settings.png");
+}
+
+/* Restart Buttons in the Game */
+.restartButton {
+    -fx-graphic: url("../images/lightmode/restart.png");
+}
+
+#shineRed{
+    -fx-image: url("../images/game/shineRed.png");
+}
+
+#shineBlue{
+    -fx-image: url("../images/game/shineBlue.png");
+}
+
+#shineYellow{
+    -fx-image: url("../images/game/shineYellow.png");
+}
+
+#shineGreen{
+    -fx-image: url("../images/game/shineGreen.png");
+}
+
+
+
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuScene.StartGameController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <Label styleClass="title-label" text="%startGameLabel" />
+            <VBox alignment="TOP_CENTER" prefHeight="249.0" prefWidth="1230.0">
+               <VBox.margin>
+                  <Insets bottom="25.0" left="25.0" right="25.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="240.0" prefWidth="500.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="68.0" prefWidth="1230.0" styleClass="area">
+                           <children>
+                              <Label text="%userNameLabel" />
+                              <TextField id="userNameField" fx:id="usernameField" prefHeight="25.0" prefWidth="1195.0" promptText="%userNamePromptText" />
+                              <Label styleClass="infoText" text="%infoLabel">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin></Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="78.0" prefWidth="1230.0" spacing="10.0">
+                           <children>
+                              <Label text="%colorLabel" />
+                              <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                 <children>
+                                    <ToggleButton id="blueToggle" fx:id="blueFigure" mnemonicParsing="false" />
+                                    <ToggleButton id="redToggle" fx:id="redFigure" layoutX="407.0" layoutY="10.0" mnemonicParsing="false" />
+                                    <ToggleButton id="yellowToggle" fx:id="yellowFigure" layoutX="799.0" layoutY="10.0" mnemonicParsing="false" />
+                                    <ToggleButton id="greenToggle" fx:id="greenFigure" layoutX="844.0" layoutY="10.0" mnemonicParsing="false" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="10.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Label text="%NPCLabel" />
+                              <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="1230.0" spacing="20.0">
+                                 <children>
+                                    <ToggleButton id="comP1" fx:id="comP1" mnemonicParsing="false" styleClass="comPlayerToggle" />
+                                    <ToggleButton id="comP2" fx:id="comP2" mnemonicParsing="false" styleClass="comPlayerToggle" />
+                                    <ToggleButton id="comP3" fx:id="comP3" mnemonicParsing="false" styleClass="comPlayerToggle" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="1230.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#changeScreenToMenu" text="%backButton">
+                           <styleClass>
+                              <String fx:value="yellow-button" />
+                              <String fx:value="back" />
+                           </styleClass></Button>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="25.0" prefWidth="697.0">
+                           <children>
+                              <Label fx:id="errorUsername" alignment="CENTER" contentDisplay="CENTER" styleClass="infoText" textAlignment="CENTER" />
+                           </children>
+                        </VBox>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#changeScreenToGame" text="%playButton">
+                           <styleClass>
+                              <String fx:value="red-button" />
+                              <String fx:value="start" />
+                           </styleClass></Button>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

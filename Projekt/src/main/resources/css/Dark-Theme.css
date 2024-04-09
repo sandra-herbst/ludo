@@ -1,0 +1,417 @@
+{
+    light-text-primary-color:    #EEEEEF;
+    light-text-secondary-color:  #636363;
+    dark-primary-color:          #2F3136;
+    dark-secondary-color:        #36393F;
+    dark-third-color:            #202225;
+    dark-color:                  #1C1C1C;
+    dark-sec-color:             #111111;
+    yellow-color:               #FFEE31;
+    red-color:                  #F44152;
+    green-color:                #0BD674;
+    blue-color:                 #28A7E8;
+}
+
+/* Dot Background in the Start Game & Rules Stage */
+.root {
+    -fx-background-color: dark-color;
+    -fx-background-image: url("../images/darkmode/Dot_BGDark.png");
+}
+
+/* Background of the Main Stage */
+#bg{
+    -fx-background-image: url("../images/darkmode/BGDark.png");
+}
+
+/* Shine in the Main Stage, animated in MainController*/
+#shineImage{
+    -fx-image: url("../images/darkmode/shineDark.png");
+}
+
+/* Background for the Settings Stage */
+#settingsbg{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../images/settingsBG.png");
+}
+
+/* Background for the Confirm Stage */
+#confirmbg {
+    -fx-background-color: transparent;
+    -fx-background-image: url("../images/ConfirmBG.png");
+}
+
+/* Logo */
+#iconImage{
+    -fx-image: url("../images/darkmode/IconDark.png");
+}
+
+/* Background for the Game Stage */
+#gamebg{
+    -fx-background-image: none;
+    -fx-background-color: dark-color;
+}
+
+/* Graphic for the Game Board Gridpane */
+#gameBoard{
+    -fx-background-image: url("../images/game/Brettspiel.png");
+}
+
+/* Graphic for the winner Pop Up */
+#winnerbg{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../images/game/winnerBG.png");
+}
+
+/* Username Area accent in Start Game Stage */
+.area{
+    -fx-background-image: url("../images/darkmode/OptionsDark.png");
+}
+
+/* Username Textfield */
+.text-field:focused {
+    -fx-background-color: transparent;
+    -fx-prompt-text-fill: #696E73;
+    -fx-text-fill: light-text-primary-color;
+    -fx-font-style: italic;
+}
+
+.text-field {
+    -fx-min-width: 230px;
+    -fx-max-width: 230px;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: grey;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-color: transparent;
+    -fx-text-fill: #696E73;
+    -fx-font-size: 15pt;
+    -fx-background-radius: 0px;
+}
+
+/* Text in any Stage */
+.label{
+    -fx-font-size: 25px;
+    -fx-font-family: 'Gilroy-Bold';
+    -fx-text-fill: light-text-secondary-color;
+}
+
+.infoText{
+    -fx-font-size: 15px;
+    -fx-font-family: 'Gilroy-Regular';
+}
+
+/* Header Labels */
+.title-label{
+    -fx-text-fill: linear-gradient(white, darkgrey);
+    -fx-font-family: 'Gilroy-ExtraBold';
+    -fx-font-size: 60px;
+    -fx-effect: innershadow( gaussian , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+/* Rules Header Label */
+.rules-titledark{
+    -fx-text-fill: linear-gradient(dark-sec-color, light-text-secondary-color);
+}
+
+/* All Buttons (Such as Back, Play, Confirm...) */
+.button {
+    -fx-background-radius: 35px;
+    -fx-background-color: transparent;
+    -fx-font-size: 23pt;
+    -fx-font-family: 'Gilroy-ExtraBold';
+    -fx-max-width: 310px;
+    -fx-max-height: 10px;
+    -fx-border-width: 5px;
+    -fx-border-radius: 35px;
+}
+
+/* RadioButton of the Settings Stage (DarkTheme) */
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #000;
+    -fx-background-color: white;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+    -fx-padding: 4px;
+}
+.radio-button .radio:selected {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:armed {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:determinate {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:indeterminate {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button .dot {
+    -fx-background-radius: 15px;
+    -fx-padding: 8px;
+}
+
+/* Styling of the Buttons (Back, Play, Confirm ...) */
+.red-button{
+    -fx-text-fill: linear-gradient(#c7483a, #4d1410);
+    -fx-border-color: linear-gradient(#ffc4b5 25%, #4d1410);
+    -fx-background-color: linear-gradient(#ffc4b5, #cf3325);
+}
+
+.green-button{
+    -fx-text-fill: linear-gradient(#4d7a26, #243d0d);
+    -fx-border-color: linear-gradient(#d2ff52 25%, #243d0d);
+    -fx-background-color: linear-gradient(#d2ff52, #61b017);
+}
+
+.blue-button{
+    -fx-text-fill: linear-gradient(#1f74b5, #07487a);
+    -fx-border-color: linear-gradient(#b7deed 25%, #07487a);
+    -fx-background-color: linear-gradient(#b7deed, #21b4e2);
+}
+
+.yellow-button{
+    -fx-text-fill: linear-gradient(#e07a21, #ad5202);
+    -fx-border-color: linear-gradient(#ffd65b 25%, #ad5202);
+    -fx-background-color: linear-gradient(#ffd65b, #e68400);
+}
+
+
+
+.red-button:hover{
+    -fx-text-fill: linear-gradient(#ffc4b5, #cf3325);
+    -fx-border-color: linear-gradient(#4d1410, #cf3325);
+    -fx-background-color: linear-gradient(#c7483a, #8f2f28);
+}
+
+.green-button:hover{
+    -fx-text-fill: linear-gradient(#d2ff52, #61b017);
+    -fx-border-color: linear-gradient(#243d0d, #61b017);
+    -fx-background-color: linear-gradient(#4d7a26, #466e21);
+}
+
+.blue-button:hover{
+    -fx-text-fill: linear-gradient(#b7deed, #21b4e2);
+    -fx-border-color: linear-gradient(#07487a, #1f74b5);
+    -fx-background-color: linear-gradient(#1f74b5, #1169ac);
+}
+
+.yellow-button:hover{
+    -fx-text-fill: linear-gradient(#ffd65b, #e68400);
+    -fx-border-color: linear-gradient(#ad5202, #e07a21);
+    -fx-background-color: linear-gradient(#e07a21, #ad5202);
+}
+
+/* Graphics of the buttons (Back, Play, Confirm ...)*/
+.start{
+    -fx-graphic: url("../images/icons/play.png");
+    -fx-graphic-text-gap: 30px;
+}
+
+.rules{
+    -fx-graphic: url("../images/icons/rules.png");
+    -fx-graphic-text-gap: 30px;
+}
+
+.settings{
+    -fx-graphic: url("../images/icons/settings.png");
+    -fx-graphic-text-gap: 30px;
+}
+
+.exit{
+    -fx-graphic: url("../images/icons/close.png");
+    -fx-graphic-text-gap: 30px;
+}
+
+.confirm{
+    -fx-graphic: url("../images/icons/check.png");
+    -fx-graphic-text-gap: 30px;
+}
+
+.back{
+    -fx-graphic: url("../images/icons/back.png");
+    -fx-graphic-text-gap: 30px;
+}
+
+/* Toggle Buttons of the Start Game Stage */
+.toggle-button {
+    -fx-background-color: dark-primary-color;
+    -fx-border-color: dark-sec-color;
+    -fx-border-radius: 95px;
+    -fx-border-width: 5px;
+    -fx-background-radius: 97px;
+}
+
+/* Graphics of the Figure Color Buttons */
+#blueToggle {
+    -fx-graphic: url("../images/Figure_blue.png");
+}
+
+#yellowToggle {
+    -fx-graphic: url("../images/Figure_yellow.png");
+}
+
+#redToggle {
+    -fx-graphic: url("../images/Figure_red.png");
+}
+
+#greenToggle {
+    -fx-graphic: url("../images/Figure_green.png");
+}
+#blueToggle:hover, #blueToggle:selected {
+    -fx-background-color: linear-gradient(#b7deed, #21b4e2);
+}
+
+#yellowToggle:hover,#yellowToggle:selected {
+    -fx-background-color: linear-gradient(#ffd65b, #e68400);
+}
+
+#redToggle:hover, #redToggle:selected {
+    -fx-background-color: linear-gradient(#ffc4b5, #cf3325);
+}
+
+#greenToggle:hover, #greenToggle:selected {
+    -fx-background-color: linear-gradient(#d2ff52, #61b017);
+}
+
+.comPlayerToggle{
+    -fx-font-family: 'Gilroy-ExtraBold';
+    -fx-font-size: 30px;
+    -fx-border-radius: 65px;
+    -fx-background-radius: 75px;
+}
+
+/* Graphics of the ComPlayer Amount Buttons */
+#comP1{
+    -fx-graphic: url("../images/ComP1.png");
+}
+#comP2{
+    -fx-graphic: url("../images/ComP2.png");
+}
+#comP3{
+    -fx-graphic: url("../images/ComP3.png");
+}
+
+.toggle-button:hover {
+    -fx-effect: innershadow( gaussian , rgba(0,1,0,1) , 6, 0.5 , 3 , 3 );
+    -fx-background-color: light-text-primary-color;
+}
+
+.toggle-button:selected {
+    -fx-effect: innershadow( gaussian , rgba(0,0,0,1) , 6, 0.5 , 3 , 3 );
+    -fx-background-color: light-text-primary-color;
+}
+
+/* Figures on the Game */
+.figure{
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.figure:hover{
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
+}
+
+.figure:selected{
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);
+}
+
+/* Figure Graphics on the Game */
+.redFigure{
+    -fx-graphic: url("../images/game/piecesRed.png");
+}
+
+.blueFigure{
+    -fx-graphic: url("../images/game/piecesBlue.png");
+}
+
+.yellowFigure{
+    -fx-graphic: url("../images/game/piecesYellow.png");
+}
+
+.greenFigure{
+    -fx-graphic: url("../images/game/piecesGreen.png");
+}
+
+/* Username Labels in the Game */
+#redName{
+    -fx-font-size: 40px;
+    -fx-text-fill: linear-gradient(#ffc4b5, #cf3325);
+}
+#blueName{
+    -fx-font-size: 40px;
+    -fx-text-fill: linear-gradient(#b7deed, #21b4e2);
+}
+#greenName{
+    -fx-font-size: 40px;
+    -fx-text-fill: linear-gradient(#d2ff52, #61b017);
+}
+#yellowName{
+    -fx-font-size: 40px;
+    -fx-text-fill: linear-gradient(#ffd65b, #e68400);
+}
+
+/* Settings Buttons in the Game */
+#settingsButton {
+    -fx-border-radius: none;
+    -fx-border-width: none;
+    -fx-background-radius: none;
+    -fx-effect: none;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-graphic: url("../images/darkmode/settings.png");
+}
+
+/* Restart Buttons in the Game */
+.restartButton {
+    -fx-border-radius: none;
+    -fx-border-width: none;
+    -fx-background-radius: none;
+    -fx-effect: none;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-graphic: url("../images/darkmode/restart.png");
+}
+
+.restartButton:hover {
+    -fx-border-radius: none;
+    -fx-border-width: none;
+    -fx-background-radius: none;
+    -fx-effect: none;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.restartButton:selected {
+    -fx-border-radius: none;
+    -fx-border-width: none;
+    -fx-background-radius: none;
+    -fx-effect: none;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#shineRed{
+    -fx-image: url("../images/game/shineDarkMode.png");
+}
+
+#shineBlue{
+    -fx-image: url("../images/game/shineDarkMode.png");
+}
+
+#shineYellow{
+    -fx-image: url("../images/game/shineDarkMode.png");
+}
+
+#shineGreen{
+    -fx-image: url("../images/game/shineDarkMode.png");
+}
+
+.labelError{
+    -fx-text-fill: #EEEEEF;
+}

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="gamebg" fx:id="paneGame" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GameScene.GameController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <ImageView id="shineRed" fx:id="shineRed" fitHeight="250.0" fitWidth="250.0" layoutX="23.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView id="shineBlue" fx:id="shineBlue" fitHeight="250.0" fitWidth="250.0" layoutX="1006.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView id="shineGreen" fx:id="shineGreen" fitHeight="250.0" fitWidth="250.0" layoutX="1006.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+            <ImageView id="shineYellow" fx:id="shineYellow" fitHeight="250.0" fitWidth="250.0" layoutX="23.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+         </children>
+      </AnchorPane>
+      <VBox prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <HBox prefHeight="290.0" prefWidth="1280.0">
+               <children>
+                  <VBox fx:id="redBox" alignment="TOP_CENTER" prefHeight="260.0" prefWidth="260.0" visible="false">
+                     <children>
+                        <Label id="redName" fx:id="redLabel" text="%redLabel" />
+                        <ImageView id="redDice" fx:id="redDice" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="redErrorLabel" alignment="CENTER" styleClass="labelError" textAlignment="CENTER" />
+                     </children>
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="33.0" prefWidth="724.0">
+                     <children>
+                        <Label fx:id="roundLabel" />
+                     </children>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox fx:id="blueBox" alignment="TOP_CENTER" layoutX="94.0" layoutY="10.0" prefHeight="219.0" prefWidth="253.0" visible="false">
+                     <children>
+                        <Label id="blueName" fx:id="blueLabel" styleClass="blueName" text="%blueLabel" />
+                        <ImageView id="blueDice" fx:id="blueDice" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="blueErrorLabel" alignment="CENTER" styleClass="labelError" textAlignment="CENTER" />
+                     </children>
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <Region prefHeight="64.0" prefWidth="1280.0" />
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="335.0" prefWidth="1280.0">
+               <children>
+                  <VBox fx:id="yellowBox" alignment="TOP_CENTER" prefHeight="246.0" prefWidth="260.0" visible="false">
+                     <children>
+                        <Label id="yellowName" fx:id="yellowLabel" text="%yellowLabel" />
+                        <ImageView id="yellowDice" fx:id="yellowDice" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="yellowErrorLabel" alignment="CENTER" styleClass="labelError" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <Region prefHeight="260.0" prefWidth="726.0" />
+                  <VBox fx:id="greenBox" alignment="TOP_CENTER" layoutX="94.0" layoutY="10.0" prefHeight="265.0" prefWidth="248.0" visible="false">
+                     <children>
+                        <Label id="greenName" fx:id="greenLabel" text="%greenLabel" />
+                        <ImageView id="greenDice" fx:id="greenDice" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="greenErrorLabel" alignment="CENTER" styleClass="labelError" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="20.0" top="30.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="TOP_CENTER" prefHeight="54.0" prefWidth="1280.0" spacing="10.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <ToggleButton id="settingsButton" mnemonicParsing="false" onAction="#changeScreenToSettings" />
+            <Region prefHeight="49.0" prefWidth="1185.0" />
+            <ToggleButton layoutX="20.0" layoutY="15.0" mnemonicParsing="false" onAction="#changeScreenToConfirm" styleClass="restartButton" />
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </HBox>
+      <VBox id="gameBoard" alignment="CENTER" layoutX="308.0" layoutY="39.0" pickOnBounds="false" prefHeight="659.0" prefWidth="659.0">
+         <children>
+            <GridPane fx:id="board" alignment="CENTER" prefHeight="801.0" prefWidth="670.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ToggleButton fx:id="redFigure1" mnemonicParsing="false" visible="false">
+                     <styleClass>
+                        <String fx:value="redFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="redFigure2" mnemonicParsing="false" visible="false" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="redFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="redFigure3" mnemonicParsing="false" visible="false" GridPane.rowIndex="1">
+                     <styleClass>
+                        <String fx:value="redFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="redFigure4" mnemonicParsing="false" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <styleClass>
+                        <String fx:value="redFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="blueFigure1" mnemonicParsing="false" visible="false" GridPane.columnIndex="9">
+                     <styleClass>
+                        <String fx:value="blueFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="blueFigure2" mnemonicParsing="false" visible="false" GridPane.columnIndex="10">
+                     <styleClass>
+                        <String fx:value="blueFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="blueFigure3" mnemonicParsing="false" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                     <styleClass>
+                        <String fx:value="blueFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="blueFigure4" mnemonicParsing="false" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="1">
+                     <styleClass>
+                        <String fx:value="blueFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="yellowFigure1" mnemonicParsing="false" visible="false" GridPane.rowIndex="9">
+                     <styleClass>
+                        <String fx:value="yellowFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="yellowFigure2" mnemonicParsing="false" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <styleClass>
+                        <String fx:value="yellowFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="yellowFigure3" mnemonicParsing="false" visible="false" GridPane.rowIndex="10">
+                     <styleClass>
+                        <String fx:value="yellowFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="yellowFigure4" mnemonicParsing="false" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <styleClass>
+                        <String fx:value="yellowFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="greenFigure2" mnemonicParsing="false" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="9">
+                     <styleClass>
+                        <String fx:value="greenFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="greenFigure1" mnemonicParsing="false" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="9">
+                     <styleClass>
+                        <String fx:value="greenFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="greenFigure3" mnemonicParsing="false" visible="false" GridPane.columnIndex="9" GridPane.rowIndex="10">
+                     <styleClass>
+                        <String fx:value="greenFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <ToggleButton fx:id="greenFigure4" mnemonicParsing="false" visible="false" GridPane.columnIndex="10" GridPane.rowIndex="10">
+                     <styleClass>
+                        <String fx:value="greenFigure" />
+                        <String fx:value="figure" />
+                     </styleClass></ToggleButton>
+                  <Button fx:id="cheatButton" mnemonicParsing="false" onAction="#createButtonCheat" text="cheat" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="settingsbg" fx:id="pane" prefHeight="420.0" prefWidth="640.0" stylesheets="@../css/Light-Theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PopUpScene.SettingsController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutY="14.0" prefHeight="259.0" prefWidth="640.0" spacing="10.0">
+         <children>
+            <Label styleClass="title-label" text="%settingsLabel" />
+            <HBox alignment="TOP_CENTER" prefHeight="57.0" prefWidth="640.0" spacing="60.0">
+               <children>
+                  <RadioButton fx:id="lightThemeButton" mnemonicParsing="false" selected="true" text="%lightThemeButton">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="themes" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="darkThemeButton" mnemonicParsing="false" text="%darkThemeButton" toggleGroup="$themes">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <Label id="info" text="%info" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+               <children>
+                  <ToggleButton id="english" fx:id="englishButton" mnemonicParsing="false" styleClass="language" />
+                  <ToggleButton id="deutsch" fx:id="deutschButton" mnemonicParsing="false" styleClass="language" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="TOP_CENTER" layoutY="333.0" prefHeight="30.0" prefWidth="640.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#confirmSettings" text="%confirmSettingsButton">
+               <styleClass>
+                  <String fx:value="red-button" />
+                  <String fx:value="confirm" />
+               </styleClass></Button>
+            <Region prefHeight="76.0" prefWidth="45.0" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelSettings" text="%cancelSettingsButton">
+               <styleClass>
+                  <String fx:value="blue-button" />
+                  <String fx:value="exit" />
+               </styleClass></Button>
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

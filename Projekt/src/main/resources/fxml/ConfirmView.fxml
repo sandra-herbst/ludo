@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="confirmbg" fx:id="pane" prefHeight="208.0" prefWidth="646.0" stylesheets="@../css/Light-Theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PopUpScene.ConfirmController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutY="14.0" prefHeight="247.0" prefWidth="646.0" spacing="20.0">
+            <children>
+                <Label fx:id="textLabel" alignment="CENTER" prefHeight="88.0" prefWidth="669.0" styleClass="title-label" text="%confirmLabel" />
+              <HBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="640.0">
+                  <children>
+                      <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#confirmSettings" text="%confirmButton">
+                          <styleClass>
+                              <String fx:value="red-button" />
+                              <String fx:value="confirm" />
+                          </styleClass>
+                  </Button>
+                      <Region prefHeight="76.0" prefWidth="124.0" />
+                      <Button fx:id="cancelButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelSettings" text="%cancelButton">
+                          <styleClass>
+                              <String fx:value="blue-button" />
+                              <String fx:value="exit" />
+                          </styleClass>
+                  </Button>
+                  </children>
+                  <padding>
+                      <Insets left="15.0" right="15.0" />
+                  </padding>
+              </HBox>
+                <Label fx:id="choices" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
